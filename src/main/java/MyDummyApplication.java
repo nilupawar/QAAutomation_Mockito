@@ -14,4 +14,7 @@ public class MyDummyApplication {
     public int run(String a){
         return dummyService.run(a);
     }
+    public void run(){
+        dummyService.run();
+    }
 }
