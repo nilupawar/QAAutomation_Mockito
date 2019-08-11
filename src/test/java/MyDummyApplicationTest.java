@@ -23,14 +23,24 @@ public class MyDummyApplicationTest
     /**
      * Example 1 :
      * when a parameterised method is mocked for a return value then the parameter
-     * should be same value during exeution to get the same return value
+     * should be same value during execution to get the same return value
      */
     @Test
     public void example1(){
-        when(dummyService.run("test")).thenReturn(1);
-        // Other way write above statement is
-        // doReturn(1).when(dummyService).run("test");
-        Assert.assertEquals(1,myDummyApplication.run("test"));
+         when(dummyService.run("test")).thenReturn(1);
+         // Other way write above statement is
+         doReturn(1).when(dummyService).run("test");
+         Assert.assertEquals(1,myDummyApplication.run("test"));
+    }
+
+    /**
+     * Example 1_1 :
+     * NOw to get rid of dependency mentioned in example 1 you can use any() method
+     */
+    @Test
+    public void example1_1(){
+        doReturn(1).when(dummyService).run(any(String.class));
+        Assert.assertEquals(1,myDummyApplication.run("Pass any value of type string"));
     }
 
     /**
@@ -51,6 +61,4 @@ public class MyDummyApplicationTest
         inOrder.verify(dummyService).run();
         inOrder.verify(dummyService).run("test");
     }
-
-
 }
