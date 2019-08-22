@@ -1,5 +1,3 @@
-import sun.reflect.generics.scope.DummyScope;
-
 public class MyDummyApplication {
     DummyService dummyService;
 
@@ -8,13 +6,13 @@ public class MyDummyApplication {
         dummyService.run();
     }
 
-    public void setDummyService(DummyService dummyService){
+    void setDummyService(DummyService dummyService){
         this.dummyService =dummyService;
     }
-    public int run(String a){
+    int run(String a){
         return dummyService.run(a);
     }
-    public void run(){
+    void run(){
         dummyService.run();
     }
 }

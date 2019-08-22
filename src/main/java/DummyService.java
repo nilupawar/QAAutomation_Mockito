@@ -1,6 +1,6 @@
 public class DummyService {
 
-    public void run(){
+    void run(){
         System.out.println("run method without any parameter and return value called");
     }
 
@@ -8,8 +8,10 @@ public class DummyService {
         System.out.println("run method with int parameter called");
     }
 
-    public int run(String anyValue){
+    int run(String anyValue){
         System.out.println("run method with string parmeter and int return is called");
         return 1;
     }
+
+
 }

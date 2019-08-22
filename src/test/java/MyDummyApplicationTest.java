@@ -61,4 +61,15 @@ public class MyDummyApplicationTest
         inOrder.verify(dummyService).run();
         inOrder.verify(dummyService).run("test");
     }
+
+
+    /**
+     * This example is to demonstrate that you don't have to write mock method when only using verify method
+     */
+    @Test
+    public void example3(){
+        myDummyApplication.run();
+        verify(dummyService,times(1)).run();
+        verify(dummyService,times(0)).run(1);
+    }
 }
