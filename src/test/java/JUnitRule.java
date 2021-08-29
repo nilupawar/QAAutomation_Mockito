@@ -24,6 +24,7 @@ public class JUnitRule {
         System.out.println("Testing for folder creation : " + file.exists());
         Assert.assertTrue(file.delete());
         System.out.println("Testing for folder creation : " + file.exists());
+
     }
 
     @Test
@@ -39,6 +40,5 @@ public class JUnitRule {
         Assert.assertTrue(file.delete());
         System.out.println("Testing for folder creation : " + file.exists());
     }
-
 
 }

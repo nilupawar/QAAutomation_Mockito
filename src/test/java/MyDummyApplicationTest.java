@@ -72,4 +72,6 @@ public class MyDummyApplicationTest
         verify(dummyService,times(1)).run();
         verify(dummyService,times(0)).run(1);
     }
+
+
 }

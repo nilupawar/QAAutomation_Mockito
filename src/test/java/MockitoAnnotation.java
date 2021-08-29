@@ -26,6 +26,6 @@ public class MockitoAnnotation {
         verify(dummyService).run(PARAM);                                // Verifies method is called
         verify(dummyService,times(1)).run(PARAM);  // Verifies method is called 1 time
         verify(dummyService,atLeast(1)).run(PARAM);  // Verifies method is called atleast 1 time
-    }
 
+    }
 }
